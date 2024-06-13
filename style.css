@@ -1,0 +1,112 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.whole{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: ease-out 0.3s;
+    background-color: lightgrey;
+}
+
+#test{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 25px 25px;
+    background-color: red;
+    color: #520000;
+    font-weight: 900;
+    font-size: 1em;
+    background: linear-gradient(145deg, #ff8484 0%, red 5%, #520000 95%);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: color 2s ease-out, font-size .15s ease-in-out;
+}
+
+#test:hover{
+    color: #ffffffe9;
+    font-size: 1.2em;
+}
+
+#test:active{
+    animation: translate-down 0.5s ease-in-out;
+}
+
+#testcontainer{
+    margin: 20px auto;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 250px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.585), -10px -10px 15px rgba(0, 0, 0, 0.585);
+    background: linear-gradient(145deg, grey 0%, white 45%, grey 55%);
+}
+
+.thebutton{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 25%;
+    border-radius: 25px 0;
+    transition: ease-out 0.3s;
+    background-color: lightgrey;
+}
+
+#span{
+    font-size: 1.5em;
+    position: relative;
+    top: -230px;
+    background: -webkit-linear-gradient(left, rgb(155, 54, 54), #930707);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#h1{
+    font-size: 1.2em;
+    background: -webkit-linear-gradient(left, rgb(164, 19, 19), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    bottom: 250px;
+    position: relative;
+}
+
+#h2{
+    font-size: 1.5em;
+    position: relative;
+    bottom: 250px;
+    background: -webkit-linear-gradient(left, rgb(164, 19, 19), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes translate-down {
+    0% {
+        background: linear-gradient(145deg, #ff8484 0%, red 5%, #520000 95%);
+    }
+    50% {
+        margin: 35px 35px;
+        width: 180px;
+        height: 180px;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.585), -10px -10px 15px rgba(0, 0, 0, 0.585);
+    }
+    100% {
+        background: linear-gradient(145deg, #ff8484 0%, red 5%, #520000 95%);
+    }
+}
