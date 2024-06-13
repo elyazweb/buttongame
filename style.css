@@ -1,3 +1,11 @@
+:root {
+    --color1: #1e3a4b;
+    --color2: rgba(68, 67, 67, 0.816);
+    --color3: rgba(59, 69, 69, 0.669);
+    --color4: rgba(0, 0, 0, 0.457);
+    --color5: #e22030;
+  }
+
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2em;
@@ -5,21 +13,17 @@ body{
     align-items: center;
     margin: 0;
     overflow: hidden;
+    background-color: #f0e9e9;
 }
 
 .whole{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+    width: 50%;
     margin: auto;
     margin-top: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 25px 0;
+    border-radius: 25px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     transition: ease-out 0.3s;
-    background-color: lightgrey;
+    background: linear-gradient(250deg, grey 0%, white 35%, grey 75%);
 }
 
 #test{
@@ -27,73 +31,73 @@ body{
     height: 200px;
     border-radius: 50%;
     margin: 25px 25px;
-    background-color: red;
     color: #520000;
     font-weight: 900;
     font-size: 1em;
-    background: linear-gradient(145deg, #ff8484 0%, red 5%, #520000 95%);
+    background: linear-gradient(145deg, #ff8484 0%, var(--color5) 5%, #520000 95%);
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
     border: none;
     cursor: pointer;
-    transition: color 2s ease-out, font-size .15s ease-in-out;
-}
-
-#test:hover{
     color: #ffffffe9;
     font-size: 1.2em;
 }
 
 #test:active{
-    animation: translate-down 0.5s ease-in-out;
+    animation: translate-down 0.2s ease-out;
 }
 
 #testcontainer{
-    margin: 20px auto;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
     align-items: center;
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    position: relative;
-    margin-bottom: 250px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.585), -10px -10px 15px rgba(0, 0, 0, 0.585);
     background: linear-gradient(145deg, grey 0%, white 45%, grey 55%);
 }
 
 .thebutton{
-    position: relative;
     align-items: center;
     justify-content: center;
-    margin: 20px 25%;
-    border-radius: 25px 0;
-    transition: ease-out 0.3s;
-    background-color: lightgrey;
+    border-radius: 25px;
+    padding-top: 25px;
+    margin-bottom: 0;
+}
+
+.score{
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
 }
 
 #span{
     font-size: 1.5em;
-    position: relative;
-    top: -230px;
-    background: -webkit-linear-gradient(left, rgb(155, 54, 54), #930707);
+    background: var(--color4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    margin: 0;
 }
 
 #h1{
     font-size: 1.2em;
-    background: -webkit-linear-gradient(left, rgb(164, 19, 19), #333);
+    margin-top: 50px;
+    background: var(--color2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    bottom: 250px;
-    position: relative;
+    margin-bottom: 0;
 }
 
 #h2{
     font-size: 1.5em;
-    position: relative;
-    bottom: 250px;
-    background: -webkit-linear-gradient(left, rgb(164, 19, 19), #333);
+    background: var(--color3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
+    margin-top: 0;
 }
 
 @keyframes translate-down {
@@ -110,3 +114,48 @@ body{
         background: linear-gradient(145deg, #ff8484 0%, red 5%, #520000 95%);
     }
 }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.5em;
+            }
+
+            .whole {
+                width: 90%;
+                padding: 15px;
+                height: 80%;
+            }
+
+            #span{
+                margin-top: 20px;
+                font-size: 2em;
+            }
+
+            #h1, #h2 {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1.2em;
+            }
+
+            .whole {
+                width: 90%;
+                padding: 15px;
+                height: 80%;
+            }
+
+            #span{
+                margin-top: 20px;
+                font-size: 2em;
+            }
+
+            #h1, #h2 {
+                font-size: 1.2em;
+            }
+        }
